@@ -32,7 +32,7 @@
 
 ```
 bank-app/
-├── backend/                    # 后端服务（Spring Boot）
+├── transaction/                    # 后端服务（Spring Boot）
 │   ├── src/main/java/org/bank
 │   │   ├── controller/         # 接口层
 │   │   ├── service/impl/       # 业务实现
@@ -40,11 +40,12 @@ bank-app/
 │   │   └── BankTransactionApplication.java
 │   ├── pom.xml                 # Maven 配置
 │   └── Dockerfile
-├── frontend/                   # （可选）前端工程
+├── bank-frontend/                   # （可选）前端工程
 │   ├── src/                    # Vue / React 等前端代码
 │   ├── Dockerfile
 ├── docker-compose.yml          # 一键部署配置
 ├── docs                        # 测试以及演示文档
+├── pressureTest                # 性能测试代码
 └── README.md                   # 项目说明
 
 ```
