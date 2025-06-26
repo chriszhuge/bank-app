@@ -1,0 +1,16 @@
+resilience4j:
+  rate-limiter:
+    instances:
+      transactionService:
+        limit-for-period: 500000       # 每周期最多10个请求
+        limit-refresh-period: 1s   # 1秒一个周期
+        timeout-duration: 500ms    # 超过等待时间直接失败
+        ignore-exceptions:
+          - org.bank.common.exception.TransactionException
+  circuitbreaker:
+    instances:
+      transactionService:
+        ignore-exceptions:
+          - org.bank.common.exception.TransactionException
+
+
