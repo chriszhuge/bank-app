@@ -68,11 +68,10 @@ docker compose up --build -d
 3. 访问服务
 后端 API 接口（默认端口）：http://localhost:8080
 
-Swagger 文档地址：http://localhost:8080/swagger-ui.html
-
 前端页面地址：http://localhost
 
 📌 API 示例
+
 POST /transactions 创建交易
 
 GET /transactions?page=1&size=10 分页获取交易
@@ -82,6 +81,7 @@ PUT /transactions/{id} 更新交易
 DELETE /transactions/{id} 删除交易
 
 ⚙️ 自定义配置说明
+
 后台配置（application.yml）中启用了：
 ```
 resilience4j:
@@ -102,6 +102,7 @@ resilience4j:
 ```
 
 📦 本地开发（非 Docker）
+
 后端启动
 ```
 cd backend
