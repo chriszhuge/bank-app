@@ -12,7 +12,7 @@
 - ❌ 删除交易
 - ⚡️ 接口限流 & 熔断（Resilience4j）
 - 🧠 缓存查询结果
-- 🔐 Swagger 接口文档（SpringDoc OpenAPI）
+- 🔐 Swagger 接口文档（非容器环境下支持）
 - 📦 前后端分离，支持 Docker Compose 快速部署
 
 ---
@@ -44,6 +44,7 @@ bank-app/
 │   ├── src/                    # Vue / React 等前端代码
 │   ├── Dockerfile
 ├── docker-compose.yml          # 一键部署配置
+├── docs                        # 测试以及演示文档
 └── README.md                   # 项目说明
 
 ```
