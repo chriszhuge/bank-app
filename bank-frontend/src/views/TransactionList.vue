@@ -36,7 +36,14 @@
       v-model:page-size="size"
       @current-change="load"
     />
-    <TransactionForm v-if="formVisible" :transaction="current" @close="formVisible = false; load()" />
+
+    <!-- ✅ 使用 v-model:visible 控制弹窗显示 -->
+    <TransactionForm
+      v-if="formVisible"
+      v-model:visible="formVisible"
+      :transaction="current"
+      @close="onFormClose"
+    />
   </el-card>
 </template>
 
@@ -57,6 +64,7 @@ function load() {
   loading.value = true;
   getTransactions(page.value, size.value).then(res => {
     transactions.value = res.data.data || [];
+    total.value = res.data.total || 0;
     loading.value = false;
   });
 }
@@ -73,6 +81,10 @@ function edit(row) {
 function openCreate() {
   current.value = null;
   formVisible.value = true;
+}
+
+function onFormClose() {
+  load();
 }
 
 function typeLabel(val) {
