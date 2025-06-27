@@ -19,7 +19,7 @@
 
 ##  功能演示
 
-![录屏2025-06-27 09 30 05](https://github.com/user-attachments/assets/d6b5c5c7-3cd1-4bf9-84d7-820122559ece)
+![录屏2025-06-27 09 30 05](https://github.com/chriszhuge/bank-app/blob/main/docs/demo.gif)
 
 
 ## 🛠️ 技术栈
